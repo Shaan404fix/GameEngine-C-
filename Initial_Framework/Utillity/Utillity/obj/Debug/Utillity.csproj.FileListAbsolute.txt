@@ -1,0 +1,5 @@
+C:\Users\shaan\Documents\Computer Science\Year 3\Game Engine Architecture\Labs\Initial_Framework\Utillity\Utillity\bin\Debug\Utillity.dll
+C:\Users\shaan\Documents\Computer Science\Year 3\Game Engine Architecture\Labs\Initial_Framework\Utillity\Utillity\bin\Debug\Utillity.pdb
+C:\Users\shaan\Documents\Computer Science\Year 3\Game Engine Architecture\Labs\Initial_Framework\Utillity\Utillity\obj\Debug\Utillity.csproj.CoreCompileInputs.cache
+C:\Users\shaan\Documents\Computer Science\Year 3\Game Engine Architecture\Labs\Initial_Framework\Utillity\Utillity\obj\Debug\Utillity.dll
+C:\Users\shaan\Documents\Computer Science\Year 3\Game Engine Architecture\Labs\Initial_Framework\Utillity\Utillity\obj\Debug\Utillity.pdb

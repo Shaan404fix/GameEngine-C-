@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2E6747F8-4FCB-40C5-88EB-1BB78B61F61D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenGL_Game</RootNamespace>
+    <AssemblyName>OpenGL_Game</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>WindowsGL</MonoGamePlatform>
+    <MonoGameContentBuilderExe>
+    </MonoGameContentBuilderExe>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\WindowsGL\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\WindowsGL\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="EngineCode\Components\ComponenetRotation.cs" />
+    <Compile Include="EngineCode\Components\ComponentAi.cs" />
+    <Compile Include="EngineCode\Components\ComponentAudio.cs" />
+    <Compile Include="EngineCode\Components\ComponentCollision.cs" />
+    <Compile Include="EngineCode\Components\ComponentControl.cs" />
+    <Compile Include="EngineCode\Components\ComponentCubeTexture.cs" />
+    <Compile Include="EngineCode\Components\ComponentGeometry.cs" />
+    <Compile Include="EngineCode\Components\ComponentScale.cs" />
+    <Compile Include="EngineCode\Components\ComponentTexture.cs" />
+    <Compile Include="EngineCode\Components\ComponentPosition.cs" />
+    <Compile Include="EngineCode\Components\ComponentVelocity.cs" />
+    <Compile Include="EngineCode\Systems\SystemSkyboxRender.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="EngineCode\Managers\CollisionManager.cs" />
+    <Compile Include="EngineCode\Managers\ControlManager.cs" />
+    <Compile Include="EngineCode\Managers\SceneManager.cs" />
+    <Compile Include="GameCode\Objects\Control.cs" />
+    <Compile Include="GameCode\Objects\Entity.cs" />
+    <Compile Include="EngineCode\Managers\EntityManager.cs" />
+    <Compile Include="GameCode\Objects\Geometry.cs" />
+    <Compile Include="EngineCode\Components\IComponent.cs" />
+    <Compile Include="GameCode\Objects\WallCollisions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EngineCode\Managers\ResourceManager.cs" />
+    <Compile Include="GameCode\Scenes\GameOverScene.cs" />
+    <Compile Include="GameCode\Scenes\GameScene.cs" />
+    <Compile Include="GameCode\Scenes\GUI.cs" />
+    <Compile Include="GameCode\Scenes\IScene.cs" />
+    <Compile Include="GameCode\Scenes\MainMenuScene.cs" />
+    <Compile Include="GameCode\Scenes\Scene.cs" />
+    <Compile Include="EngineCode\Systems\ISystem.cs" />
+    <Compile Include="EngineCode\Managers\SystemManager.cs" />
+    <Compile Include="EngineCode\Systems\SystemAi.cs" />
+    <Compile Include="EngineCode\Systems\SystemAudio.cs" />
+    <Compile Include="EngineCode\Systems\SystemCollision.cs" />
+    <Compile Include="EngineCode\Systems\SystemControl.cs" />
+    <Compile Include="EngineCode\Systems\SystemPhysics.cs" />
+    <Compile Include="EngineCode\Systems\SystemRender.cs" />
+    <Compile Include="EngineCode\Systems\SystemTransform.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=2.0.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>packages\OpenTK.2.0.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UtollityLib">
+      <HintPath>UtollityLib\UtollityLib\bin\Debug\UtollityLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Geometry\Pacman.obj" />
+    <None Include="Geometry\SquareGeometry.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Geometry\TriangleGeometry.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Shaders\fsky.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\vsky.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Textures\spaceship.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\fs.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Shaders\vs.glsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Audio\buzz.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\eatball.wav" />
+    <Content Include="Audio\Launch.wav" />
+    <Content Include="Audio\PacmanWakaWaka.wav" />
+    <Content Include="Audio\Rocket.wav" />
+    <Content Include="Audio\SFX_Powerup_35.wav" />
+    <None Include="Geometry\Ground.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Geometry\SkyBox2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Geometry\SkyBox.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Geometry\SquareGeometry5.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Geometry\SquareGeometry4.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Geometry\SquareGeometry3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Geometry\SquareGeometry2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <!-- Specify the search path explicitly so the ResolveAssemblyReferences task picks the right ones -->
+  <Target Name="BeforeResolveReferences">
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\openal.redist.2.0.7.0\build\net40\openal.redist.targets" Condition="Exists('packages\openal.redist.2.0.7.0\build\net40\openal.redist.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\openal.redist.2.0.7.0\build\net40\openal.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openal.redist.2.0.7.0\build\net40\openal.redist.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
